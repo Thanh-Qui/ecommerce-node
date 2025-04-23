@@ -15,7 +15,9 @@ const Nav = () => {
                 <div className="row position-relative">
                     <div className="col-sm-3 part1 d-flex align-items-center">
                         <Button className="bg-g text-white catTab">
-                          <GridViewIcon/> &nbsp;Browse All Categories <KeyboardArrowDownIcon/>
+                          <GridViewIcon/>
+                          <span>&nbsp; Browse All Categories </span>
+                           <KeyboardArrowDownIcon/>
                         </Button>
                     </div>
 
@@ -43,34 +45,34 @@ const Nav = () => {
                                             <div className="col">
                                                 <h4 className="text-g">Fruit & Vegetables</h4>
                                                 <ul style={{padding:'0px'}} className="mt-4 mb-0">
-                                                    <li><Link to="/about">Meat & Poultry</Link></li>
-                                                    <li><Link to="/about">Fresh Vegetables</Link></li>
-                                                    <li><Link to="/about">Herbs & Seasonings</Link></li>
-                                                    <li><Link to="/about">Cuts & Sprouts</Link></li>
-                                                    <li><Link to="/about">Exotic Fruits & Veggies</Link></li>
-                                                    <li><Link to="/about">Packaged Produce</Link></li>
+                                                    <li><Link>Meat & Poultry</Link></li>
+                                                    <li><Link>Fresh Vegetables</Link></li>
+                                                    <li><Link>Herbs & Seasonings</Link></li>
+                                                    <li><Link>Cuts & Sprouts</Link></li>
+                                                    <li><Link>Exotic Fruits & Veggies</Link></li>
+                                                    <li><Link>Packaged Produce</Link></li>
                                                 </ul>
                                             </div>
                                             <div className="col">
                                                 <h4 className="text-g">Breakfast & Dairy</h4>
                                                 <ul style={{padding:'0px'}} className="mt-4 mb-0">
-                                                    <li><Link to="/about">Meat & Poultry</Link></li>
-                                                    <li><Link to="/about">Fresh Vegetables</Link></li>
-                                                    <li><Link to="/about">Herbs & Seasonings</Link></li>
-                                                    <li><Link to="/about">Cuts & Sprouts</Link></li>
-                                                    <li><Link to="/about">Exotic Fruits & Veggies</Link></li>
-                                                    <li><Link to="/about">Packaged Produce</Link></li>
+                                                    <li><Link>Meat & Poultry</Link></li>
+                                                    <li><Link>Fresh Vegetables</Link></li>
+                                                    <li><Link>Herbs & Seasonings</Link></li>
+                                                    <li><Link>Cuts & Sprouts</Link></li>
+                                                    <li><Link>Exotic Fruits & Veggies</Link></li>
+                                                    <li><Link>Packaged Produce</Link></li>
                                                 </ul>
                                             </div>
                                             <div className="col">
                                                 <h4 className="text-g">Meat & Seafood</h4>
                                                 <ul style={{padding:'0px'}} className="mt-4 mb-0">
-                                                    <li><Link to="/about">Meat & Poultry</Link></li>
-                                                    <li><Link to="/about">Fresh Vegetables</Link></li>
-                                                    <li><Link to="/about">Herbs & Seasonings</Link></li>
-                                                    <li><Link to="/about">Cuts & Sprouts</Link></li>
-                                                    <li><Link to="/about">Exotic Fruits & Veggies</Link></li>
-                                                    <li><Link to="/about">Packaged Produce</Link></li>
+                                                    <li><Link>Meat & Poultry</Link></li>
+                                                    <li><Link>Fresh Vegetables</Link></li>
+                                                    <li><Link>Herbs & Seasonings</Link></li>
+                                                    <li><Link>Cuts & Sprouts</Link></li>
+                                                    <li><Link>Exotic Fruits & Veggies</Link></li>
+                                                    <li><Link>Packaged Produce</Link></li>
                                                 </ul>
                                             </div>
                                             <div className="col">
@@ -90,17 +92,17 @@ const Nav = () => {
 
                                     <div className="dropdown_menu">
                                         <ul style={{padding:'0px'}}>
-                                            <li><Button><Link to="/about">About Us</Link></Button></li>
-                                            <li><Button><Link to="/about">Contact</Link></Button></li>
-                                            <li><Button><Link to="/about">My Account</Link></Button></li>
-                                            <li><Button><Link to="/about">Login</Link></Button></li>
-                                            <li><Button><Link to="/about">Register</Link></Button></li>
-                                            <li><Button><Link to="/about">Forgot Password</Link></Button></li>
-                                            <li><Button><Link to="/about">Reset Password</Link></Button></li>
-                                            <li><Button><Link to="/about">Purchase Guide</Link></Button></li>
-                                            <li><Button><Link to="/about">Privacy Policy</Link></Button></li>
-                                            <li><Button><Link to="/about">Terms of Service</Link></Button></li>
-                                            <li><Button><Link to="/about">404 Page</Link></Button></li>
+                                            <li><Button><Link>About Us</Link></Button></li>
+                                            <li><Button><Link>Contact</Link></Button></li>
+                                            <li><Button><Link>My Account</Link></Button></li>
+                                            <li><Button><Link>Login</Link></Button></li>
+                                            <li><Button><Link>Register</Link></Button></li>
+                                            <li><Button><Link>Forgot Password</Link></Button></li>
+                                            <li><Button><Link>Reset Password</Link></Button></li>
+                                            <li><Button><Link>Purchase Guide</Link></Button></li>
+                                            <li><Button><Link>Privacy Policy</Link></Button></li>
+                                            <li><Button><Link>Terms of Service</Link></Button></li>
+                                            <li><Button><Link>404 Page</Link></Button></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -111,7 +113,7 @@ const Nav = () => {
                         </nav>
                     </div>
 
-                    <div className="col-sm-2 part3 d-flex align-items-center">
+                    <div className="col-sm-2 part3 d-flex align-items-center justify-content-end">
                         <div className="phNo d-flex align-items-center ml-auto">
                             <span><HeadsetOutlinedIcon/></span>
                             <div className="info ml-3">

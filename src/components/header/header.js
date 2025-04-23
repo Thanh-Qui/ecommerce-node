@@ -125,7 +125,7 @@ const Header = () => {
                                                 // && dùng để hiển thị điều kiện. nếu đk trước đúng thì hiển thị đoạn sau
                                                 isOpenDropDown!==false &&
                                                 <ul className='dropdownMenu'>
-                                                    <li><Button className='align-items-center'><PermIdentityIcon/>My Account</Button></li>
+                                                    <li><Button><PermIdentityIcon/>My Account</Button></li>
                                                     <li><Button><PlaceOutlinedIcon/>Order Tracking</Button></li>
                                                     <li><Button><FavoriteBorderOutlinedIcon/>My Wishlist</Button></li>
                                                     <li><Button><SettingsOutlinedIcon/>Setting</Button></li>

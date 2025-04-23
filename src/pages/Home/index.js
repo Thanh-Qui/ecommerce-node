@@ -1,8 +1,9 @@
 import React from "react";
+import HomeSlider from '../Home/slider/index';
 
 const Home = () => {
     return (
-        <h1>Home</h1>
+        <HomeSlider/>
     )
 }
 

@@ -9,6 +9,7 @@ import About from './pages/About/index';
 function App() {
   return (
    <BrowserRouter>
+      {/* component header */}
       <Header/>
 
       {/* Các route được bọc trong routes */}
