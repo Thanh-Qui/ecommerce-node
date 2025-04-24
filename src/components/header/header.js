@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../header/header.css';
 import Logo from '../../assets/images/logo.svg';
 import SearchIcon from '@mui/icons-material/Search';
@@ -24,6 +24,7 @@ import Nav from './nav/nav';
 const Header = () => {
 
     const [isOpenDropDown, setOpenDropDown] = useState(false);
+    const headerRef = useRef();
 
     const [categories, setcategories] = useState([
         'Milks and Dairies',
@@ -58,92 +59,109 @@ const Header = () => {
         }
     }
 
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            let position = window.pageYOffset;
+            if (position > 100) {
+                headerRef.current.classList.add('fixed');
+            } else {
+                headerRef.current.classList.remove('fixed');
+            }
+        })
+    }, []);
+
     return (
         <>
-            <header>
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className='col-sm-2'>
-                            <img width={'180px'} src={Logo} alt="logo" />
-                        </div>
+            <div className="headerWrapper" ref={headerRef}>
+                <header >
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className='col-sm-2'>
+                                <img width={'180px'} src={Logo} alt="logo" />
+                            </div>
 
-                        {/* headerSearch start here */}
-                        <div className='col-sm-5'>
-                            <div className='headerSearch d-flex align-items-center'>
-                                {/* truyền dữ liệu từ component cha xuống con (props) */}
-                                <Select data={categories} placeholder={'All Categories'} icon={false} />
+                            {/* headerSearch start here */}
+                            <div className='col-sm-5'>
+                                <div className='headerSearch d-flex align-items-center'>
+                                    {/* truyền dữ liệu từ component cha xuống con (props) */}
+                                    <Select data={categories} placeholder={'All Categories'} icon={false} />
 
-                                <div className="search">
-                                    <input type="text" name="" id="" placeholder='Search for items...' />
-                                    <SearchIcon className='searchIcon cursor' />
+                                    <div className="search">
+                                        <input type="text" name="" id="" placeholder='Search for items...' />
+                                        <SearchIcon className='searchIcon cursor' />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        {/* headerSearch end here */}
+                            {/* headerSearch end here */}
 
-                        <div className='col-sm-5 d-flex align-item-center'>
-                            <div className="ml-auto d-flex align-item-center">
-                                <div className="countryWrapper">
-                                    <Select data={countryList} placeholder={'Your location'}
-                                        icon={<LocationOnOutlinedIcon style={{ opacity: '0.5' }} />} />
+                            <div className='col-sm-5 d-flex align-item-center'>
+                                <div className="ml-auto d-flex align-item-center">
+                                    <div className="countryWrapper">
+                                        <Select data={countryList} placeholder={'Your location'}
+                                            icon={<LocationOnOutlinedIcon style={{ opacity: '0.5' }} />} />
+                                    </div>
+
+                                    <ClickAwayListener onClickAway={() => setOpenDropDown(false)}>
+                                        <ul className='list list-inline mb-0 headerTabs'>
+                                            <li className='list-inline-item'>
+                                                <span>
+                                                    <img src={IconCompare} alt="" />
+                                                    <span className='badge bg-success rounded-circle'>3</span>
+                                                    Compare
+                                                </span>
+                                            </li>
+
+                                            <li className='list-inline-item'>
+                                                <span>
+                                                    <img src={IconHeart} alt="" />
+                                                    <span className='badge bg-success rounded-circle'>3</span>
+                                                    Wishlist
+                                                </span>
+                                            </li>
+
+                                            <li className='list-inline-item'>
+                                                <span>
+                                                    <img src={IconCart} alt="" />
+                                                    <span className='badge bg-success rounded-circle'>3</span>
+                                                    Cart
+                                                </span>
+                                            </li>
+
+                                            {/* gọi hàm setOpenDropDown và đảo ngược giá trị hiện tại */}
+                                            <li className='list-inline-item'>
+                                                <span onClick={() => setOpenDropDown(!isOpenDropDown)}>
+                                                    <img src={IconUser} alt="" />
+                                                    Account
+                                                </span>
+
+                                                {
+                                                    // && dùng để hiển thị điều kiện. nếu đk trước đúng thì hiển thị đoạn sau
+                                                    isOpenDropDown !== false &&
+                                                    <ul className='dropdownMenu'>
+                                                        <li><Button><PermIdentityIcon />My Account</Button></li>
+                                                        <li><Button><PlaceOutlinedIcon />Order Tracking</Button></li>
+                                                        <li><Button><FavoriteBorderOutlinedIcon />My Wishlist</Button></li>
+                                                        <li><Button><SettingsOutlinedIcon />Setting</Button></li>
+                                                        <li><Button><LogoutOutlinedIcon />Sign out</Button></li>
+                                                    </ul>
+                                                }
+
+
+                                            </li>
+                                        </ul>
+                                    </ClickAwayListener>
                                 </div>
-
-                                <ClickAwayListener onClickAway={()=>setOpenDropDown(false)}>
-                                    <ul className='list list-inline mb-0 headerTabs'>
-                                        <li className='list-inline-item'>
-                                            <span>
-                                                <img src={IconCompare} alt="" />
-                                                <span className='badge bg-success rounded-circle'>3</span>
-                                                Compare
-                                            </span>
-                                        </li>
-
-                                        <li className='list-inline-item'>
-                                            <span>
-                                                <img src={IconHeart} alt="" />
-                                                <span className='badge bg-success rounded-circle'>3</span>
-                                                Wishlist
-                                            </span>
-                                        </li>
-
-                                        <li className='list-inline-item'>
-                                            <span>
-                                                <img src={IconCart} alt="" />
-                                                <span className='badge bg-success rounded-circle'>3</span>
-                                                Cart
-                                            </span>
-                                        </li>
-
-                                        {/* gọi hàm setOpenDropDown và đảo ngược giá trị hiện tại */}
-                                        <li className='list-inline-item'>
-                                            <span onClick={()=>setOpenDropDown(!isOpenDropDown)}>
-                                                <img src={IconUser} alt="" />
-                                                Account
-                                            </span>
-
-                                            {
-                                                // && dùng để hiển thị điều kiện. nếu đk trước đúng thì hiển thị đoạn sau
-                                                isOpenDropDown!==false &&
-                                                <ul className='dropdownMenu'>
-                                                    <li><Button><PermIdentityIcon/>My Account</Button></li>
-                                                    <li><Button><PlaceOutlinedIcon/>Order Tracking</Button></li>
-                                                    <li><Button><FavoriteBorderOutlinedIcon/>My Wishlist</Button></li>
-                                                    <li><Button><SettingsOutlinedIcon/>Setting</Button></li>
-                                                    <li><Button><LogoutOutlinedIcon/>Sign out</Button></li>
-                                                </ul>
-                                            }
-
-                                            
-                                        </li>
-                                    </ul>
-                                </ClickAwayListener>
                             </div>
                         </div>
                     </div>
-                </div>
-            </header>
+                </header>
 
-            <Nav/>
+                <Nav />
+            </div>
+
+            <div className="afterHeader">
+                
+            </div>
         </>
     )
 }

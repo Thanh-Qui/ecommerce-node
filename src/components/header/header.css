@@ -3,6 +3,33 @@ header {
     height: auto;
     margin: auto;
     padding: 30px 0px;
+    background: #fff;
+}
+
+/* .headerWrapper {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+} */
+
+.headerWrapper {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.headerWrapper.fixed {
+    top: -115px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+
+}
+
+.afterHeader {
+    margin-top: 190px;
 }
 
 header .headerSearch {

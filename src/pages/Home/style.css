@@ -1,5 +1,4 @@
 .homeProducts {
-    margin-bottom: 20px;
     padding: 25px 0px;
 }
 
@@ -33,4 +32,8 @@
 .homeProducts .productRow .item {
     width: 20%;
     padding: 10px 15px;
+}
+
+.homeProductsRow2 .prodSlider .item {
+    padding: 15px 10px;
 }
