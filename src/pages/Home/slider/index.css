@@ -18,7 +18,7 @@
     height: 50px !important;
     border-radius: 50% !important;
     background: #F3F4F5;
-    z-index: 1000 !important;
+    z-index: 1 !important;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
 }
@@ -84,7 +84,7 @@
     position: absolute;
     top: 15%;
     left: 7%;
-    z-index: 100;
+    z-index: 10;
 }
 
 .home_slider_main .item .info h2 {
