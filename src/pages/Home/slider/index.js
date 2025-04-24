@@ -2,8 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import './index.css';
 
+import Button from '@mui/material/Button';
+
 import Slider1 from '../../../assets/images/slider-1.png';
 import Slider2 from '../../../assets/images/slider-2.png';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
 const HomeSlider = () => {
 
@@ -19,12 +22,12 @@ const HomeSlider = () => {
 
     return (
         <section className="homeSlider">
-            <div className="container-fluid">
+            <div className="container-fluid position-relative">
                 <Slider {...settings} className="home_slider_main">
                     <div className="item">
                         <img src={Slider1} className="w-100" alt="" />
                         <div className="info">
-                            <h2 class="mb-4">
+                            <h2 className="mb-4">
                                 Don’t miss amazing<br />
                                 grocery deals
                             </h2>
@@ -34,7 +37,7 @@ const HomeSlider = () => {
                     <div className="item">
                         <img src={Slider2} className="w-100" alt="" />
                         <div className="info">
-                            <h2 class="mb-4">
+                            <h2 className="mb-4">
                                 Fresh Vegetables<br/>
                                     Big discount
                             </h2>
@@ -42,6 +45,12 @@ const HomeSlider = () => {
                         </div>
                     </div>
                 </Slider>
+
+                <div className="newsLetterBanner">
+                    <SendOutlinedIcon/>
+                    <input type="text" name="" id="" placeholder="Your email address"/>
+                    <Button className="bg-g">Subscribe</Button>
+                </div>
             </div>
         </section>
     )
