@@ -7,6 +7,8 @@ import Home from './pages/Home/index';
 import About from './pages/About/index';
 import Listing from './pages/Listing';
 import Footer from './components/footer/footer';
+import NotFound from './pages/NotFound';
+import DetailsPage from './pages/Details';
 
 function App() {
   return (
@@ -16,12 +18,17 @@ function App() {
 
       {/* Các route được bọc trong routes */}
       <Routes>
-        <Route exact={true} path="/" element={<Home/>}/>
-        <Route exact={true} path="/listing" element={<Listing/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/listing" element={<Listing/>}/>
+        <Route path="/product/details" element={<DetailsPage/>}/>
+
+        {/* Đặt ở cuối. nếu không khớp với bất kỳ route nào ở trên thì sẽ tự động truy cập vào page 404 */}
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
       
       {/* component footer */}
       <Footer/>
+      
    </BrowserRouter>
          
   );

@@ -70,7 +70,7 @@
 
 .productThumb .imgWrapper .overlay ul {
     background: #fff;
-    max-width: 124px;
+    max-width: 125px;
     height: auto;
     border-radius: 10px;
     border: 1px solid #BCE3C9;
@@ -82,13 +82,13 @@
 
 .productThumb .imgWrapper .overlay ul li a {
     display: block;
-    padding: 10px;
+    padding: 8px;
     border-right: 1px solid #BCE3C9;
 }
 
 .productThumb .imgWrapper .overlay ul li a svg {
     color: #3bb77e !important;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .productThumb .imgWrapper .overlay ul li a:hover svg {

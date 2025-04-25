@@ -29,6 +29,15 @@ body {
   text-transform: capitalize !important;
 }
 
+.btn-g a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-lg {
+  font-size: 16px !important;
+}
+
 .btn-g:hover {
   background: #FDC040 !important;
 }
@@ -345,4 +354,27 @@ body {
 
 .rightContent .topStrip .tab_ .dropdownMenu {
   top: 100%;
+}
+
+
+/* Product Detail */
+
+.breadcrumbWrapper{
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+}
+
+.breadcrumbWrapper .breadcrumb2 {
+  background: none !important;
+  padding: 0px !important;
+}
+
+.breadcrumb2 li {
+  margin-right: 25px !important;
+}
+
+.breadcrumb2 li a {
+  color: #000 !important;
+  text-decoration: none;
 }
