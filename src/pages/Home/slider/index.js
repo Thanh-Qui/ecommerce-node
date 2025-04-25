@@ -7,6 +7,8 @@ import Button from '@mui/material/Button';
 import Slider1 from '../../../assets/images/slider-1.png';
 import Slider2 from '../../../assets/images/slider-2.png';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import Newsletter from "../../../components/newsletter";
+
 
 const HomeSlider = () => {
 
@@ -46,11 +48,7 @@ const HomeSlider = () => {
                     </div>
                 </Slider>
 
-                <div className="newsLetterBanner">
-                    <SendOutlinedIcon/>
-                    <input type="text" name="" id="" placeholder="Your email address"/>
-                    <Button className="bg-g">Subscribe</Button>
-                </div>
+                <Newsletter/>
             </div>
         </section>
     )

@@ -9,7 +9,12 @@ import './style.css';
 import Product from "../../components/product";
 
 import Banner4 from "../../assets/images/banner4.png";
+import TopProducts from "./topProducts";
 
+import NewsletterImg from '../../assets/images/newsletter.png';
+
+import Newsletter from "../../components/newsletter";
+import Footer from "../../components/footer/footer";
 
 const Home = () => {
 
@@ -106,7 +111,7 @@ const Home = () => {
                 </div>
             </section>
 
-
+            {/* Daily Best Sells */}
             <section className="homeProducts homeProductsRow2 pt-0">
                 <div className="container-fluid">
 
@@ -155,8 +160,53 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Top Selling */}
+            <section className="topProductsSection">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col">
+                            <TopProducts title="Top Selling"/>
+                        </div>
 
-            <br /><br />
+                        <div className="col">
+                            <TopProducts title="Trending Products"/>
+                        </div>
+
+                        <div className="col">
+                            <TopProducts title="Recently added"/>
+                        </div>
+
+                        <div className="col">
+                            <TopProducts title="Top Rated"/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+
+            <section className="newsLetterSection">
+                <div className="container-fluid">
+                    <div className="box d-flex align-items-center">
+                        <div className="info">
+                            <h2>Stay home & get your daily <br />
+                            needs from our shop</h2>
+                            <p>Start You'r Daily Shopping with Nest Mart</p>
+                            <br />
+                            <Newsletter/>
+                        </div>
+
+                        <div className="img">
+                            <img src={NewsletterImg} alt="" className="w-100"/>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+
+
+            {/* Footer */}
+            <Footer/>
+
         </>
     )
 }

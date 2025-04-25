@@ -37,3 +37,50 @@
 .homeProductsRow2 .prodSlider .item {
     padding: 15px 10px;
 }
+
+.topProductsSection {
+    padding: 35px 0px;
+}
+
+
+.newsLetterSection {
+    width: 100%;
+    height: auto;
+}
+
+.newsLetterSection .box {
+    background: url(../../assets/images/bg.png);
+    width: 100%;
+    height: auto;
+    padding: 40px 80px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.newsLetterSection .box .info {
+    width: 55%;
+}
+
+.newsLetterSection .box .img {
+    width: 45%;
+}
+
+.newsLetterSection .box .img img {
+    position: relative;
+    top: 40px;
+}
+
+.newsLetterSection .box h2 {
+    font-size: 36px;
+}
+
+.newsLetterSection .box p {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.newsLetterSection .box .newsLetterBanner {
+    position: relative;
+    left: 0px !important;
+    bottom: inherit !important;
+}
