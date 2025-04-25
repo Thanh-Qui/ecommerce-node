@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/header';
 import Home from './pages/Home/index';
 import About from './pages/About/index';
+import Listing from './pages/Listing';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
@@ -15,8 +17,11 @@ function App() {
       {/* Các route được bọc trong routes */}
       <Routes>
         <Route exact={true} path="/" element={<Home/>}/>
-        <Route exact={true} path="/about" element={<About/>}/>
+        <Route exact={true} path="/listing" element={<Listing/>}/>
       </Routes>
+      
+      {/* component footer */}
+      <Footer/>
    </BrowserRouter>
          
   );
