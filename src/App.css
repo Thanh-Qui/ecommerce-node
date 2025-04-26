@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
 
 * {
   margin: 0;
@@ -48,6 +50,18 @@ body {
 
 .text-g {
   color: #3bb77e;
+}
+
+.text-org {
+  color: #FDC040 !important;
+}
+
+.text-light {
+  color: #8b8b8b !important;
+}
+
+p {
+  color: #7E7E7E ;
 }
 
 .hd {
@@ -363,6 +377,7 @@ body {
   width: 100%;
   height: auto;
   padding: 20px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
 .breadcrumbWrapper .breadcrumb2 {
@@ -370,11 +385,91 @@ body {
   padding: 0px !important;
 }
 
-.breadcrumb2 li {
-  margin-right: 25px !important;
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 16px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #3bb77e;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #3bb77e;
+  text-decoration: underline;
 }
 
-.breadcrumb2 li a {
-  color: #000 !important;
-  text-decoration: none;
+.detailsPage .productInfo h2 {
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.detailsContent {
+  max-width: 90%;
+}
+
+.detailsPage .productInfo .priceSec .priceLarge {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.detailsPage .productInfo .priceSec .text-org {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.detailsPage .productInfo .priceSec .text-light.oldPrice {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.productZoom {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.zoomSlider {
+  padding-top: 20px;
+}
+
+.zoomSlider .slick-slide {
+  
+  padding-right: 10px !important;
+}
+
+.zoomSlider .item {
+  border: 1px solid transparent !important;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.zoomSlider .slick-current .item {
+  border: 1px solid #3bb77e !important;
+}
+
+.zoomSlider .slick-arrow {
+  top: 50% !important;
+  zoom: 80% !important;
+}
+
+.zoomSlider .slick-arrow.slick-next {
+  right: -7% !important;
+}
+
+.zoomSlider .slick-arrow.slick-prev {
+  left: -7% !important;
 }
