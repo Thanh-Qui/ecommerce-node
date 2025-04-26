@@ -23,6 +23,27 @@ body {
   cursor: pointer;
 }
 
+.btn-border {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 10px 25px !important;
+  border-radius: 5px !important;
+  color: #000 !important;
+}
+
+.btn-border svg {
+  opacity: 0.5 !important;
+}
+
+.btn-border:hover {
+  border: 1px solid #3bb77e !important;
+  background: #3bb77e !important;
+  color: #fff !important;
+}
+
+.btn-border:hover svg {
+  opacity: 1 !important;
+}
+
 .btn-g {
   background: #3bb77e !important;
   padding: 10px 25px !important;
@@ -416,6 +437,11 @@ ul.breadcrumb li a:hover {
 
 .detailsContent {
   max-width: 90%;
+  padding: 30px 0px;
+}
+
+.detailsPage .productInfo {
+  padding-left: 50px;
 }
 
 .detailsPage .productInfo .priceSec .priceLarge {
@@ -446,6 +472,10 @@ ul.breadcrumb li a:hover {
   padding-top: 20px;
 }
 
+.zoomSlider * {
+  outline: none;
+}
+
 .zoomSlider .slick-slide {
   
   padding-right: 10px !important;
@@ -472,4 +502,101 @@ ul.breadcrumb li a:hover {
 
 .zoomSlider .slick-arrow.slick-prev {
   left: -7% !important;
+}
+
+.productSize {
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;  
+}
+
+.productSize ul li {
+  margin-right: 10px !important;
+}
+
+.productSize ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.productSize ul li a.active {
+  background: #3bb77e !important;
+  color: #fff;
+}
+
+.addCartSection {
+  width: 100%;
+  height: auto;
+}
+
+.addCartSection .counterSec {
+  width: 15%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #3bb77e !important;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.addCartSection .counterSec input {
+  width: 60px;
+  height: 30px;
+  padding: 8px;
+  border: 0px;
+  outline: none !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.addCartSection .counterSec {
+  position: relative;
+}
+
+.addCartSection .counterSec .arrow {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.addCartSection .counterSec .arrow.plus {
+  top: -1px;
+  right: 8px;
+}
+
+.addCartSection .counterSec .arrow.minus {
+  bottom: -1px;
+  right: 8px;
+}
+
+.addtocartbtn svg {
+  font-size: 20px !important;
+}
+
+.addCartSection button {
+  height: 50px;
+  min-width: inherit !important;
+}
+
+.addCartSection button svg {
+  font-size: 20px !important;
 }
